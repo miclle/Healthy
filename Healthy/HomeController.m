@@ -32,7 +32,11 @@
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"健康时刻";
     
-    self.collectionView = [UICollectionView alloc];
+    self.view.backgroundColor = [UIColor greenColor];
+
+    UICollectionViewFlowLayout *layout= [[UICollectionViewFlowLayout alloc]init];
+    
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     
     // 注册可重用视图
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
@@ -42,7 +46,9 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-//    [self.view addSubview:self.collectionView];
+    NSLog(@"%@", self.collectionView);
+    
+    [self.view addSubview:self.collectionView];
     
     float iconFontSize = 28;
     

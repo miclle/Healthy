@@ -10,7 +10,7 @@
 		005BE7D5DB224FF492CFB0E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD65F1EEB6DA4E6ABB00EAF1 /* libPods.a */; };
 		38B607C0183466D4009C4941 /* CollectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607BF183466D4009C4941 /* CollectionHeadView.m */; };
 		38B607C2183475BF009C4941 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B607C1183475BF009C4941 /* CoreText.framework */; };
-		38B607C51834BB65009C4941 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607C41834BB65009C4941 /* HomeController.m */; };
+		38B607D21834C65C009C4941 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607D11834C65C009C4941 /* HomeController.m */; };
 		38E64E0D1833282B00950AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E64E0C1833282B00950AC2 /* Foundation.framework */; };
 		38E64E0F1833282B00950AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E64E0E1833282B00950AC2 /* CoreGraphics.framework */; };
 		38E64E111833282B00950AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E64E101833282B00950AC2 /* UIKit.framework */; };
@@ -42,8 +42,8 @@
 		38B607BE183466D4009C4941 /* CollectionHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionHeadView.h; sourceTree = "<group>"; };
 		38B607BF183466D4009C4941 /* CollectionHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionHeadView.m; sourceTree = "<group>"; };
 		38B607C1183475BF009C4941 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		38B607C31834BB65009C4941 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
-		38B607C41834BB65009C4941 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		38B607D01834C65C009C4941 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		38B607D11834C65C009C4941 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		38E64E091833282B00950AC2 /* Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E64E0C1833282B00950AC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38E64E0E1833282B00950AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,8 +133,8 @@
 			children = (
 				38E64E1D1833282B00950AC2 /* AppDelegate.h */,
 				38E64E1E1833282B00950AC2 /* AppDelegate.m */,
-				38B607C31834BB65009C4941 /* HomeController.h */,
-				38B607C41834BB65009C4941 /* HomeController.m */,
+				38B607D01834C65C009C4941 /* HomeController.h */,
+				38B607D11834C65C009C4941 /* HomeController.m */,
 				38B607BE183466D4009C4941 /* CollectionHeadView.h */,
 				38B607BF183466D4009C4941 /* CollectionHeadView.m */,
 				38E64E231833282B00950AC2 /* Images.xcassets */,
@@ -306,8 +306,8 @@
 				38E64E1F1833282B00950AC2 /* AppDelegate.m in Sources */,
 				38B607C0183466D4009C4941 /* CollectionHeadView.m in Sources */,
 				38E64E221833282B00950AC2 /* Healthy.xcdatamodeld in Sources */,
+				38B607D21834C65C009C4941 /* HomeController.m in Sources */,
 				38E64E1B1833282B00950AC2 /* main.m in Sources */,
-				38B607C51834BB65009C4941 /* HomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
