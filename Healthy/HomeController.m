@@ -11,6 +11,8 @@
 #import "Categories/UIColor+Hex.h"
 
 #import "HomeController.h"
+#import "DiseaseController.h"
+#import "HospitalPharmacyController.h"
 
 @interface HomeController ()
 
@@ -31,9 +33,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
     self.navigationItem.title = @"健康时刻";
     
-//    self.view.backgroundColor = [UIColor greenColor];
+    // self.view.backgroundColor = [UIColor greenColor];
 
     UICollectionViewFlowLayout *layout= [[UICollectionViewFlowLayout alloc]init];
     
@@ -80,7 +83,7 @@
 }
 
 #pragma mark - UICollectionViewDataSource
-// 返回section的数量
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
@@ -91,12 +94,9 @@
     return [self.icons count];
 }
 
-// 返回在某个cell。与table view的cell类似
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
-    // 系统的UICollectionViewCell只能改变背景图,你应该自定义一个class继承UICollectionViewCell
     
     FAKFontAwesome *icon = self.icons[indexPath.row];
     
@@ -110,7 +110,6 @@
     
     [cell addSubview:iconImageView];
     
-    
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 30, 105, 80)];
     
     label.text          = self.channels[indexPath.row];
@@ -120,30 +119,53 @@
     
     [cell addSubview:label];
     
-    cell.backgroundColor = [UIColor colorWithHex:0xFFFFFF alpha:0.5];
+    cell.accessibilityValue = self.channels[indexPath.row];
+    cell.backgroundColor    = [UIColor colorWithHex:0xFFFFFF alpha:0.5];
     
-    UIView* selectedBGView = [[UIView alloc] initWithFrame:cell.bounds];
-    selectedBGView.backgroundColor = [UIColor colorWithHex:0xFFFFFF];
-    cell.selectedBackgroundView = selectedBGView;
+    UIView* selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+    
+    selectedBackgroundView.backgroundColor = [UIColor colorWithHex:0xFFFFFF];
+    
+    cell.selectedBackgroundView = selectedBackgroundView;
     
     return cell;
 }
-
-//// 返回headview或footview
-//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-//{
-//    CollectionHeadView *headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"head" forIndexPath:indexPath];
-//    return headView;
-//}
-
 
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"didSelectItemAtIndexPath:%d-%d", indexPath.section, indexPath.row);
-    HomeController *test = [[HomeController alloc] init];
-    [self.navigationController pushViewController:test animated:YES];
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    
+    NSString *channel = cell.accessibilityValue;
+    
+    UIViewController *view;
+    
+    if ([channel isEqualToString:@"症状疾病"]) {
+        view = [[DiseaseController alloc] init];
+    }
+    
+    if ([channel isEqualToString:@"药店医院"]) {
+        view = [[HospitalPharmacyController alloc] init];
+    }
+    
+    if ([channel isEqualToString:@"急救信息"]) {
+        view = [[DiseaseController alloc] init];
+    }
+    
+    if ([channel isEqualToString:@"饮食健康"]) {
+        view = [[DiseaseController alloc] init];
+    }
+    
+    if ([channel isEqualToString:@"九种体质"]) {
+        view = [[DiseaseController alloc] init];
+    }
+    
+    if ([channel isEqualToString:@"经络穴位"]) {
+        view = [[DiseaseController alloc] init];
+    }
+    
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath

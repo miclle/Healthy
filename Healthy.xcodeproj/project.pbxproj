@@ -11,6 +11,8 @@
 		38B607C2183475BF009C4941 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B607C1183475BF009C4941 /* CoreText.framework */; };
 		38B607D21834C65C009C4941 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607D11834C65C009C4941 /* HomeController.m */; };
 		38B607D71835B9E6009C4941 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607D61835B9E6009C4941 /* UIColor+Hex.m */; };
+		38B607DA1835FA73009C4941 /* DiseaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607D91835FA73009C4941 /* DiseaseController.m */; };
+		38B607DD1836145A009C4941 /* HospitalPharmacyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607DC1836145A009C4941 /* HospitalPharmacyController.m */; };
 		38E64E0D1833282B00950AC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E64E0C1833282B00950AC2 /* Foundation.framework */; };
 		38E64E0F1833282B00950AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E64E0E1833282B00950AC2 /* CoreGraphics.framework */; };
 		38E64E111833282B00950AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E64E101833282B00950AC2 /* UIKit.framework */; };
@@ -44,6 +46,10 @@
 		38B607D11834C65C009C4941 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		38B607D51835B9E6009C4941 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		38B607D61835B9E6009C4941 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		38B607D81835FA73009C4941 /* DiseaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiseaseController.h; sourceTree = "<group>"; };
+		38B607D91835FA73009C4941 /* DiseaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiseaseController.m; sourceTree = "<group>"; };
+		38B607DB1836145A009C4941 /* HospitalPharmacyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalPharmacyController.h; sourceTree = "<group>"; };
+		38B607DC1836145A009C4941 /* HospitalPharmacyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalPharmacyController.m; sourceTree = "<group>"; };
 		38E64E091833282B00950AC2 /* Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E64E0C1833282B00950AC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38E64E0E1833282B00950AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +152,10 @@
 				38E64E1E1833282B00950AC2 /* AppDelegate.m */,
 				38B607D01834C65C009C4941 /* HomeController.h */,
 				38B607D11834C65C009C4941 /* HomeController.m */,
+				38B607D81835FA73009C4941 /* DiseaseController.h */,
+				38B607D91835FA73009C4941 /* DiseaseController.m */,
+				38B607DB1836145A009C4941 /* HospitalPharmacyController.h */,
+				38B607DC1836145A009C4941 /* HospitalPharmacyController.m */,
 				38E64E231833282B00950AC2 /* Images.xcassets */,
 				38E64E201833282B00950AC2 /* Healthy.xcdatamodeld */,
 				38E64E151833282B00950AC2 /* Supporting Files */,
@@ -312,9 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B607DA1835FA73009C4941 /* DiseaseController.m in Sources */,
 				38E64E1F1833282B00950AC2 /* AppDelegate.m in Sources */,
 				38B607D71835B9E6009C4941 /* UIColor+Hex.m in Sources */,
 				38E64E221833282B00950AC2 /* Healthy.xcdatamodeld in Sources */,
+				38B607DD1836145A009C4941 /* HospitalPharmacyController.m in Sources */,
 				38B607D21834C65C009C4941 /* HomeController.m in Sources */,
 				38E64E1B1833282B00950AC2 /* main.m in Sources */,
 			);
