@@ -34,6 +34,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.navigationItem.title = @"健康时刻";
     
     // self.view.backgroundColor = [UIColor greenColor];
