@@ -13,7 +13,7 @@ platform :ios, '6.0'
 
 # networking
 #pod 'Reachability'  # Network access detection.
-#pod 'AFNetworking'  # A delightful iOS and OS X networking framework http://afnetworking.com https://github.com/AFNetworking/AFNetworking 轻量级的iOS、Mac OS X网络通信类库
+pod 'AFNetworking', '~> 1.3.3'   # A delightful iOS and OS X networking framework http://afnetworking.com https://github.com/AFNetworking/AFNetworking 轻量级的iOS、Mac OS X网络通信类库
 #pod 'ShareKit'
 
 # code helper
@@ -23,7 +23,6 @@ platform :ios, '6.0'
 # View
 #pod 'ViewDeck'      # An implementation of the sliding functionality found in the Path 2.0 or Facebook iOS apps. https://github.com/Inferis/ViewDeck
 #pod 'TISwipeableTableView'
-#pod 'FontAwesomeIconFactory'    #A factory for turning Font Awesome icons into images for user interface controls. https://github.com/nschum/FontAwesomeIconFactory Works for iOS and OS X. Font Awesome was created by Dave Gandy. http://fortawesome.github.com/Font-Awesome
 pod 'FontAwesomeKit', '~> 2.1.0' #Simple helper for using Font-Awesome on iOS. https://github.com/PrideChung/FontAwesomeKit http://fortawesome.github.com/Font-Awesome
 
 #pod 'PullToRefresh' #A simple iPhone TableViewController for adding pull-to-refresh functionality.  https://github.com/leah/PullToRefresh
@@ -55,7 +54,7 @@ pod 'FontAwesomeKit', '~> 2.1.0' #Simple helper for using Font-Awesome on iOS. h
 #pod 'FTUtils' # Phone utilities mostly for Core Animation.
 
 #Cache
-#pod 'SDWebImage'
+#pod 'SDWebImage' #图片缓存和uiimageview的扩展，用起来非常简单 https://github.com/rs/SDWebImage
 
 # Text
 #pod 'TTTAttributedLabel' #A drop-in replacement for UILabel that supports attributes, data detectors,links, and more.
