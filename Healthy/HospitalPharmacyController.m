@@ -5,6 +5,9 @@
 //  Created by Miclle Zheng on 13-11-15.
 //  Copyright (c) 2013年 JKYD. All rights reserved.
 //
+
+#import <AFJSONRequestOperation.h>
+
 #import "Categories/UIColor+Hex.h"
 
 #import "HospitalPharmacyController.h"
@@ -42,8 +45,6 @@
     
     [self.toolbar sizeToFit];
     
-//    NSArray *segmentedArray = [[NSArray alloc] initWithObjects:@"药店",@"医院",nil];
-    
     NSArray *segmentedArray = @[@"药店", @"医院"];
     
     //初始化UISegmentedControl
@@ -51,9 +52,9 @@
     
     segmentedControl.frame = CGRectMake(110.0, 6.0, 100.0, 32.0);
     
-    segmentedControl.selectedSegmentIndex = 2;//设置默认选择项索引
+    segmentedControl.selectedSegmentIndex = 0;//设置默认选择项索引
     
-    segmentedControl.tintColor = [UIColor redColor];
+//    segmentedControl.tintColor = [UIColor redColor];
     
     //有基本四种样式
     segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;//设置样式
@@ -62,6 +63,16 @@
     [self.toolbar addSubview:segmentedControl];
     
     [self.view addSubview:self.toolbar];
+    
+    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/mobile/solution/hour/?hour=2"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"App.net Global Stream: %@", JSON);
+    } failure:nil];
+    
+    [operation start];
 }
 
 - (void)didReceiveMemoryWarning
