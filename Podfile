@@ -58,6 +58,7 @@ pod 'FontAwesomeKit', '~> 2.1.0' #Simple helper for using Font-Awesome on iOS. h
 
 # Text
 #pod 'TTTAttributedLabel' #A drop-in replacement for UILabel that supports attributes, data detectors,links, and more.
+pod 'JVFloatLabeledTextField', '~> 0.0.4'
 
 # Analytics
 #pod 'UMeng'
