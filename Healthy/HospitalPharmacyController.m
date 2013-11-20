@@ -10,7 +10,11 @@
 
 #import "Categories/UIColor+Hex.h"
 
+#import "Helpers/Route.h"
+
 #import "HospitalPharmacyController.h"
+
+#import "Pharmacy.h"
 
 @interface HospitalPharmacyController ()
 
@@ -45,40 +49,46 @@
     
     [self.toolbar sizeToFit];
     
-    NSArray *segmentedArray = @[@"药店", @"医院"];
-    
-    //初始化UISegmentedControl
-    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc]initWithItems:segmentedArray];
+    //Init UISegmentedControl
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] init];
+    [segmentedControl insertSegmentWithTitle:@"药店" atIndex:0 animated:YES];
+    [segmentedControl insertSegmentWithTitle:@"医院" atIndex:1 animated:YES];
     
     segmentedControl.frame = CGRectMake(110.0, 6.0, 100.0, 32.0);
     
     segmentedControl.selectedSegmentIndex = 0;//设置默认选择项索引
     
-//    segmentedControl.tintColor = [UIColor redColor];
+    segmentedControl.tintColor = [UIColor colorWithHex:0x999999];
     
-    //有基本四种样式
-    segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;//设置样式
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys: [UIFont boldSystemFontOfSize:14], UITextAttributeFont, [UIColor colorWithHex:0x333333], UITextAttributeTextColor, nil];
+    NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
     
+    [segmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    [segmentedControl setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:segmentedControl];
+    
+    [segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     
     [self.toolbar addSubview:segmentedControl];
     
     [self.view addSubview:self.toolbar];
     
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/mobile/solution/hour/?hour=2"];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"App.net Global Stream: %@", JSON);
-    } failure:nil];
-    
-    [operation start];
+//    [Pharmacy loadPharmacies];
+    NSLog(@"pharmacies list%@", [Route pharmacies]);
+    NSLog(@"pharmacies show%@", [Route pharmacies:@"1"]);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)segmentAction:(UISegmentedControl *)seg
+{
+    NSInteger index = seg.selectedSegmentIndex;
+    NSLog(@"Index %i", index);
 }
 
 @end

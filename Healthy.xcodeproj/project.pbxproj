@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		005BE7D5DB224FF492CFB0E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD65F1EEB6DA4E6ABB00EAF1 /* libPods.a */; };
+		3866859D183B3B4E00ED2852 /* Pharmacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3866859C183B3B4E00ED2852 /* Pharmacy.m */; };
+		386685A3183B565700ED2852 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 386685A2183B565700ED2852 /* Setting.m */; };
+		386685A6183B5BE800ED2852 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 386685A5183B5BE800ED2852 /* Route.m */; };
+		386685AA183B5F2100ED2852 /* routes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 386685A9183B5F2100ED2852 /* routes.plist */; };
 		38B607C2183475BF009C4941 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B607C1183475BF009C4941 /* CoreText.framework */; };
 		38B607D21834C65C009C4941 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607D11834C65C009C4941 /* HomeController.m */; };
 		38B607D71835B9E6009C4941 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B607D61835B9E6009C4941 /* UIColor+Hex.m */; };
@@ -41,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3866859B183B3B4E00ED2852 /* Pharmacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pharmacy.h; sourceTree = "<group>"; };
+		3866859C183B3B4E00ED2852 /* Pharmacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pharmacy.m; sourceTree = "<group>"; };
+		386685A1183B565700ED2852 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		386685A2183B565700ED2852 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		386685A4183B5BE800ED2852 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		386685A5183B5BE800ED2852 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
+		386685A9183B5F2100ED2852 /* routes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = routes.plist; sourceTree = "<group>"; };
 		38B607C1183475BF009C4941 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		38B607D01834C65C009C4941 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		38B607D11834C65C009C4941 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
@@ -100,6 +111,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3866859A183B3A1500ED2852 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3866859B183B3B4E00ED2852 /* Pharmacy.h */,
+				3866859C183B3B4E00ED2852 /* Pharmacy.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		386685A0183B55E100ED2852 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				386685A1183B565700ED2852 /* Setting.h */,
+				386685A2183B565700ED2852 /* Setting.m */,
+				386685A4183B5BE800ED2852 /* Route.h */,
+				386685A5183B5BE800ED2852 /* Route.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		38B607D41835B9C9009C4941 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +178,8 @@
 		38E64E141833282B00950AC2 /* Healthy */ = {
 			isa = PBXGroup;
 			children = (
+				386685A0183B55E100ED2852 /* Helpers */,
+				3866859A183B3A1500ED2852 /* Models */,
 				38B607D41835B9C9009C4941 /* Categories */,
 				38E64E1D1833282B00950AC2 /* AppDelegate.h */,
 				38E64E1E1833282B00950AC2 /* AppDelegate.m */,
@@ -170,6 +203,7 @@
 				38E64E171833282B00950AC2 /* InfoPlist.strings */,
 				38E64E1A1833282B00950AC2 /* main.m */,
 				38E64E1C1833282B00950AC2 /* Healthy-Prefix.pch */,
+				386685A9183B5F2100ED2852 /* routes.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -270,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E64E191833282B00950AC2 /* InfoPlist.strings in Resources */,
+				386685AA183B5F2100ED2852 /* routes.plist in Resources */,
 				38E64E241833282B00950AC2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,11 +359,14 @@
 			files = (
 				38B607DA1835FA73009C4941 /* DiseaseController.m in Sources */,
 				38E64E1F1833282B00950AC2 /* AppDelegate.m in Sources */,
+				3866859D183B3B4E00ED2852 /* Pharmacy.m in Sources */,
 				38B607D71835B9E6009C4941 /* UIColor+Hex.m in Sources */,
 				38E64E221833282B00950AC2 /* Healthy.xcdatamodeld in Sources */,
+				386685A6183B5BE800ED2852 /* Route.m in Sources */,
 				38B607DD1836145A009C4941 /* HospitalPharmacyController.m in Sources */,
 				38B607D21834C65C009C4941 /* HomeController.m in Sources */,
 				38E64E1B1833282B00950AC2 /* main.m in Sources */,
+				386685A3183B565700ED2852 /* Setting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

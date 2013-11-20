@@ -13,7 +13,7 @@ platform :ios, '6.0'
 
 # networking
 #pod 'Reachability'  # Network access detection.
-pod 'AFNetworking', '~> 1.3.3'   # A delightful iOS and OS X networking framework http://afnetworking.com https://github.com/AFNetworking/AFNetworking 轻量级的iOS、Mac OS X网络通信类库
+#pod 'AFNetworking', '~> 1.3.3'   # A delightful iOS and OS X networking framework http://afnetworking.com https://github.com/AFNetworking/AFNetworking 轻量级的iOS、Mac OS X网络通信类库
 #pod 'ShareKit'
 
 # code helper
@@ -40,7 +40,9 @@ pod 'FontAwesomeKit', '~> 2.1.0' #Simple helper for using Font-Awesome on iOS. h
 #pod 'CorePlot' # size too big
 
 # Database
-#pod 'RestKit'  # RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X https://github.com/RestKit/RestKit
+pod 'RestKit', '~> 0.20.0'          # RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X https://github.com/RestKit/RestKit
+pod 'RestKit/Search',  '~> 0.20.0'
+
 #pod 'FMDB'      # A Cocoa / Objective-C wrapper around SQLite.  https://github.com/ccgus/fmdb   http://ccgus.github.io/fmdb/html/index.html
 #pod 'MagicalRecord' # Super Awesome Easy Fetching for Core Data https://github.com/magicalpanda/MagicalRecord
 
